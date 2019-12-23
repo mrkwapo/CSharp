@@ -1,4 +1,4 @@
-//This program simply creates variables and displays the values in the counsel
+//This program simply creates variables and displays the values in the console
 using System;
 
 class MainClass {

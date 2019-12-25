@@ -1,4 +1,5 @@
-//This program demonstrates using a public class method with a constructor to assign properties to instantiations
+//This program demonstrates using a public class method
+//with a constructor to assign properties to instantiations
 using System;
 
 namespace Bulldozer {

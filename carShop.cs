@@ -35,29 +35,34 @@ namespace Carfactory
             car1.color = "Red";
             car1.manufacturer = "Toyota";
             
-            var saloonCar1 = new GeneralObject1(); // 2 seats
-            saloonCar1.numberOfSeats = 2;
+            var saloonCar1 = new GeneralObject1("2"); // 2 seats
 
-            var saloonCar2 = new Car(); // 3 seats and manufactured by Nissan
-            saloonCar2.numberOfSeats = 3;
-            saloonCar2.manufacturer = "Nissan";
+            var saloonCar2 = new Car("3", "Nissan"); // 3 seats and manufactured by Nissan
 
-            var saloonCar3 = new SaloonCar(); // 4 seats, manufactured by Ford and color Purple
-            saloonCar3.numberOfSeats = 4;
-            saloonCar3.manufacturer = "Ford";
-            saloonCar3.color = "Purple";
+            var saloonCar3 = new SaloonCar("4", "Ford", "Purple"); // 4 seats, manufactured by Ford and color Purple
         }
         public class GeneralObject1
         {
             public GeneralObject1()
             {                
             }
-            public int numberOfSeats { get; set; }
+
+            public GeneralObject1(string _numberOfSeats)
+            {
+                numberOfSeats = _numberOfSeats;
+            }
+            public string numberOfSeats { get; set; }
         }
         public class Car : GeneralObject1
         {
             public Car()
             {                         
+            }
+
+            public Car(string _numberOfSeats, string _manufacturer)
+            {
+                numberOfSeats = _numberOfSeats;
+                manufacturer = _manufacturer;
             }
             public string manufacturer { get; set; }
         }
@@ -65,6 +70,13 @@ namespace Carfactory
         {
             public SaloonCar()
             {
+            }
+
+            public SaloonCar(string _numberOfSeats, string _manufacturer, string _color)
+            {
+                numberOfSeats = _numberOfSeats;
+                manufacturer = _manufacturer;
+                color = _color;
             }
             public string color { get; set; }
         }

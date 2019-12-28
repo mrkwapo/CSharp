@@ -10,7 +10,7 @@ namespace OverFlowDemo
 
            try
             {
-                //using checked to check for the overflow exception
+                //using checked so overflow will not happen and an exception will be thrown
                 checked
                 {
                     byte number = 255; // the range of a byte is from 0 to 255 so adding 1 to it would give you 0 instead of 256
@@ -23,9 +23,9 @@ namespace OverFlowDemo
             }
             
             //this catches the exception and prints a readable error message
-            catch (System.OverflowException)
+            catch (OverflowException)
             {
-                Console.WriteLine("Caught the overflow exception");
+                Console.WriteLine("An overflow exception occured");
                 
             }
 

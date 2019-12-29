@@ -1,4 +1,4 @@
-//This program demonstrates getting and printing information from a user using 2 methods called in the main class 
+//This program demonstrates getting and printing information from a user using 4 methods called in the main class 
 using System;
 
 namespace studentInformation
@@ -8,7 +8,7 @@ namespace studentInformation
         static void Main(string[] args)
         {
             
-
+            //using the try catch method to throw the Not Implemented Exception 
             try
             {
                 var student1 = new Student();

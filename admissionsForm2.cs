@@ -7,11 +7,20 @@ namespace studentInformation
     {
         static void Main(string[] args)
         {
-            var student1 = new Student();
+            
 
-            student1.AddStudentInfo();
-            student1.AddTeacherInfo();
-            Student.PrintInfo();
+            try
+            {
+                var student1 = new Student();
+                student1.AddStudentInfo();
+                student1.AddTeacherInfo();
+                Student.PrintInfo();
+                student1.ValidateBirthday();
+            }
+            catch (NotImplementedException notImp)
+            {
+                Console.WriteLine("The following method has not been implemented: " + notImp.TargetSite);
+            }
 
         }                  
         
@@ -49,6 +58,13 @@ namespace studentInformation
                 Console.WriteLine("Degree: ");
                 degree = Console.ReadLine();
 
+            }
+
+            //Method
+            public void ValidateBirthday()
+            {
+                // Not developed yet.
+                throw new NotImplementedException();
             }
 
             //Method

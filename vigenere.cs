@@ -10,7 +10,7 @@ class MainClass {
         Console.Write("plaintext: ");
         string plaintext = Console.ReadLine();
 
-        Console.Write("key phrase: ");
+        Console.Write("keyword: ");
         string keyword = Console.ReadLine();
 
         Console.Write("ciphertext: ");

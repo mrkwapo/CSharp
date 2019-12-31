@@ -14,9 +14,7 @@ class MainClass {
 
                 Console.WriteLine("Car Speed: ");
                 var speed = Convert.ToInt32(Console.ReadLine());
-
-                var difference = speed - limit;
-                var demerit = difference / 5;
+                var demerit = (speed - limit) / 5;
 
                 switch(demerit)
                 {
@@ -36,13 +34,11 @@ class MainClass {
                   case 10:
                   case 11:
                   case 12:
-                                    
                     Console.WriteLine("{0} demerit point(s).", demerit);
                     break;
                 
 
-                default:
-                
+                default:                
                     Console.WriteLine("License Suspended");
                     break;
                 }

@@ -1,4 +1,4 @@
-//This program is known as Viginere. Like Caesar's Cipher it encrypts a word but uses a phrase instead of a number for the key.
+//This program is known as Viginere. Like Caesar's Cipher it encrypts a word but uses a keyword instead of a number for the key.
 using System;
 
 class MainClass {
@@ -11,14 +11,14 @@ class MainClass {
         string plaintext = Console.ReadLine();
 
         Console.Write("key phrase: ");
-        string phrase = Console.ReadLine();
+        string keyword = Console.ReadLine();
 
         Console.Write("ciphertext: ");
 
         for (int i = 0; i < plaintext.Length; i++)
         {
             //Declared a variable so we can use each letter in the keyword as a key
-            int key = Shift(phrase[count]);
+            int key = Shift(keyword[count]);
 
             //if no wrap around needed this just prints plaintext plus key for lowercase and uppercase letters
             if (Char.IsLower(plaintext[i]) && plaintext[i] + key <= 122) {
@@ -42,8 +42,8 @@ class MainClass {
                 count--;
             }
             //if we reach the last index character in the keyword this resets the counter to zero so we start back at the beginning of the keyword
-            if (count + 1 == phrase.Length) {
-                count = (count + 1) % phrase.Length;
+            if (count + 1 == keyword.Length) {
+                count = (count + 1) % keyword.Length;
                 count--;
             }
 

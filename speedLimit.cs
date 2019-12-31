@@ -16,13 +16,12 @@ namespace photoDimensions
 
                 Console.WriteLine("Car Speed: ");
                 var speed = Convert.ToInt32(Console.ReadLine());
-
-                var difference = speed - limit;
-                var demerit = difference / 5;
+                
+                var demerit = (speed - limit) / 5;
 
                 if (demerit < 1)
                 {
-                    Console.WriteLine("Ok! You get {0} demerit points", demerit % 1); //modulo makes result equal zero if  demerit is negative
+                    Console.WriteLine("Ok! You get {0} demerit points", demerit % 1); //modulo makes result equal zero if demerit is negative
                 }
                 else if (demerit <= 12)
                 {                    

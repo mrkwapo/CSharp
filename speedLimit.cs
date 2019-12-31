@@ -1,9 +1,9 @@
 //This program asks the user for the speed limit and the cars speed and returns the amount of demerit points
 //For every 5 miles over the speed limit the driver is given 1 demerit point. 
-//If the demerit points goes over 12, the driver's license gets suspeded.
+//If the demerit points goes over 5 the driver's license gets suspeded.
 using System;
 
-namespace speedLimit
+namespace photoDimensions
 {
     class Program
     {
@@ -20,13 +20,12 @@ namespace speedLimit
                 var difference = speed - limit;
                 var demerit = difference / 5;
 
-                if (limit >= speed)
+                if (demerit < 1)
                 {
-                    Console.WriteLine("Ok");
+                    Console.WriteLine("Ok! You get {0} demerit points", demerit % 1); //modulo makes result equal zero if  demerit is negative
                 }
                 else if (demerit <= 12)
-                {
-                    
+                {                    
                     Console.WriteLine("{0} demerit point(s).", demerit);
                 }
 
@@ -37,10 +36,8 @@ namespace speedLimit
             }
             catch (FormatException) //using this catch method in case a user doesn't input a number
             {
-
-                Console.WriteLine("Use numbers only");
-            }
-            
+                Console.WriteLine("Use integers only");
+            }            
         }
     }
 }

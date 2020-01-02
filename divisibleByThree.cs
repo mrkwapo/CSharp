@@ -1,4 +1,5 @@
-//This program contains 3 different loops that print all numbers divisible by 3 between 1 and 100. 
+/*Challenge: Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. 
+Display the count on the console.*/
 using System;
 
 namespace divisibleByThree

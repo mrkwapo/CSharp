@@ -4,8 +4,11 @@ using System;
 
 class MainClass {
     public static void Main(string[] args) {
-
+        
+        Console.WriteLine("You have 4 tries to guess the right number.");
+        
         var random = new Random().Next(1, 10);
+        
         int count = 0;
 
         //Uncomment the following line to see the winning number

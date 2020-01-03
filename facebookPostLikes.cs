@@ -20,7 +20,7 @@ class MainClass {
             Console.WriteLine("Enter a name: ");
             var input = Console.ReadLine();
 
-            if (input != "Enter") {
+            if (!String.IsNullOrWhiteSpace(input)) {
                 names.Add(input);
                 switch (names.Count) {
                     case 1:

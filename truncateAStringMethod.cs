@@ -1,4 +1,4 @@
-//Turning the truncate a string algorithm into a clean reusable method that we can use in different places
+//Turning the truncate a string algorithm into a clean reusable method that can be used in different places
 using System;
 using System.Collections.Generic;
 

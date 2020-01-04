@@ -9,7 +9,7 @@ class MainClass {
         Console.WriteLine("Please Enter your First and Last Name (Ex: John Smith): ");
         var name = Console.ReadLine();
 
-        string[] arr = name.Split(" ");
+        string[] arr = name.Split(' ');
 
         Array.Reverse(arr);
 

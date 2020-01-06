@@ -1,5 +1,5 @@
 //this code demonstrates what is needed to convert a static method to a public static method.
-//Both Program.cs and StringUtility.cs must be in same project directory
+//Both Program.cs and StringUtility.cs must be in same project directory for this program to work
 
 //Program.cs should include the following:
 using System;

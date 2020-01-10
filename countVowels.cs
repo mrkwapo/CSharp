@@ -9,7 +9,7 @@ namespace CountVowels
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a word: ");
-            var input = Console.ReadLine();
+            var input = Console.ReadLine().ToLower();
             
             if(String.IsNullOrWhiteSpace(input))
             {

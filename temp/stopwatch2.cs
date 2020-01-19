@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //using System.Timers;
-using System.Threading;
+using System.Threading; //Timers and Threading have Statis Methods that are named the same 
 using System.Diagnostics;
 
 namespace StopwatchExercise

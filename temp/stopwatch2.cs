@@ -45,29 +45,19 @@ namespace StopwatchExercise
                 System.Environment.Exit(0);
                 //Thread.Yield();
                 //Console.WriteLine("Duration: " + count);
-            }
-            
-        }
-
-              
+            }            
+        }       
 
     }
     class Program
     {
-        
-
         static void Main(string[] args)
-       {           
-
+       { 
             Console.WriteLine("The Start Time is: " + DateTime.Now.ToString("hh:mm"));
-
 
             Stopwatch.Start();
             Stopwatch.Stop();
-
-
         }
-
-        
+       
     }
 }

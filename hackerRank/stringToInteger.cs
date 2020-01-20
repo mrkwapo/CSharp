@@ -7,16 +7,17 @@ loops/conditional statements, you will get a 0 score.*/
 using System;
 
 class MainClass {
-    public static void Main(string[] args) {
-
-        try {
-
+    public static void Main(string[] args) 
+    {
+        try 
+        {
             Console.WriteLine("Number: ");
             var S = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(S);
         }
-        catch (Exception) {
+        catch (Exception) 
+        {
             Console.WriteLine("Bad String");
         }
     }

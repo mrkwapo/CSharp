@@ -23,3 +23,40 @@ Sample Output
 
 45
 */
+using System;
+
+class MainClass {
+    public static void Main(string[] args) {
+        Console.WriteLine("Actual Date: (e.g. day, month and year)");
+        var actual = Console.ReadLine();
+        var actualArr = actual.Split(" ");
+
+        Console.WriteLine("Expected Date: (e.g. day, month and year)");
+        var expected = Console.ReadLine();
+        var expectedArr = expected.Split(" ");
+
+        var expectedDay = Convert.ToInt32(expectedArr[0]);
+        var expectedMonth = Convert.ToInt32(expectedArr[1]);
+        var expectedYear = Convert.ToInt32(expectedArr[2]);
+
+        var actualDay = Convert.ToInt32(actualArr[0]);
+        var actualMonth = Convert.ToInt32(actualArr[1]);
+        var actualYear = Convert.ToInt32(actualArr[2]);
+
+        //Checks if late by days
+        if (expectedDay < actualDay)
+            Console.WriteLine((actualDay - expectedDay) * 15);
+
+        //check if late by months
+        else if (expectedMonth < actualMonth)
+            Console.WriteLine((actualMonth - expectedMonth) * 500);
+
+        //check if late by years
+        else if (actualYear > expectedYear)
+            Console.WriteLine(10000);
+
+        //No late fee
+        else
+            Console.WriteLine(0);
+    }
+}

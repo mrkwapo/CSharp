@@ -44,12 +44,12 @@ class MainClass {
         var actualYear = Convert.ToInt32(actualArr[2]);
 
         //Checks if late by days
-        if (expectedDay < actualDay)
-            Console.WriteLine((actualDay - expectedDay) * 15);
+        if ( expectedDay < actualDay && expectedMonth >= actualMonth)
+      Console.WriteLine((actualDay - expectedDay) * 15);
 
         //check if late by months
-        else if (expectedMonth < actualMonth)
-            Console.WriteLine((actualMonth - expectedMonth) * 500);
+        else if (expectedMonth < actualMonth && actualYear >= expectedYear && actualYear <= expectedYear)
+      Console.WriteLine((actualMonth - expectedMonth) * 500);
 
         //check if late by years
         else if (actualYear > expectedYear)

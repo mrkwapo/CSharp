@@ -13,4 +13,13 @@ Input Format
 
 The first line contains 3 space-separated integers denoting the respective day, month and year  on which the book was actually returned.
 The second line contains 3 space-separated integers denoting the respective day, month and year on which the book was expected to 
-be returned (due date).*/
+be returned (due date).
+
+Sample Input
+
+9 6 2015
+6 6 2015
+Sample Output
+
+45
+*/

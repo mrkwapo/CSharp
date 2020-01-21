@@ -27,13 +27,13 @@ using System;
 
 class MainClass {
     public static void Main(string[] args) {
-        Console.WriteLine("Actual Date: (e.g. day, month and year)");
+        //Console.WriteLine("Actual Date: (e.g. day, month and year)");
         var actual = Console.ReadLine();
-        var actualArr = actual.Split(" ");
+        var actualArr = actual.Split(' ');
 
-        Console.WriteLine("Expected Date: (e.g. day, month and year)");
+        //Console.WriteLine("Expected Date: (e.g. day, month and year)");
         var expected = Console.ReadLine();
-        var expectedArr = expected.Split(" ");
+        var expectedArr = expected.Split(' ');
 
         var expectedDay = Convert.ToInt32(expectedArr[0]);
         var expectedMonth = Convert.ToInt32(expectedArr[1]);

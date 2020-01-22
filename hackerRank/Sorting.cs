@@ -9,13 +9,12 @@ class MainClass {
     int n = Convert.ToInt32(Console.ReadLine());
     
     Console.WriteLine("Array: ");
-    var b = Console.ReadLine();
-    var c = b.Split();
-    var a = Array.ConvertAll(c, int.Parse);
+    string[] a_temp = Console.ReadLine().Split(' ');
+    int[] a = Array.ConvertAll(a_temp,Int32.Parse);
 
     var numSwaps = 0;
 
-    for(var i = 0; i < b.Length; i++)
+    for(var i = 0; i < a.Length; i++)
     {
       if(Array.IndexOf(a, a[i]) > Array.IndexOf(a, a[i]+1))
       {

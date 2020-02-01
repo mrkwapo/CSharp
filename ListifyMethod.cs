@@ -1,4 +1,4 @@
-//Turn a string of numbers hyphenated by numbers into a List containing each number
+//Turn a string of hyphenated numbers by numbers into a List containing each number
 using System;
 using System.Collections.Generic;
 

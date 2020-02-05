@@ -4,37 +4,47 @@ on a single line (see the Sample below for more detail).*/
 using System;
 using System.Collections.Generic;
 
-class Solution {
-    static void Main(String[] args) 
-    {        
-        int count = 0;
-        var words = new List<string>();
-        while (count < 3) 
-        {
-            Console.WriteLine ("String:");
-            var S = Console.ReadLine();
-            if (!Char.IsNumber(S[0]))
-                words.Add(S);
-            count++;
-        }
+class MainClass {
+    public static void Main(string[] args) {
+        Console.WriteLine("Enter the number of Test Cases: ");
+        var T = Convert.ToInt32(Console.ReadLine());
 
-        foreach(var word in words)
+        List < string > S = new List<string>();
+
+        var total = 0;
+
+        while (total < T) 
         {
+
+            Console.WriteLine("Words: ");
+            var words = Console.ReadLine();
+
+            S.Add(words);
+
+            total++;
+        }
+        
+        for (var i = 0; i < S.Count; i++) 
+        {
+            var count = 0;
+            var word = S[i];
+
             foreach(var letter in word)
             {
-                if (word.IndexOf(letter) % 2 == 0 && !Char.IsNumber(letter)) 
+                if (count % 2 == 0) 
                 {
                     Console.Write(letter);
                 }
+                count++;
             }
             Console.Write(" ");
 
             foreach(var letter in word)
             {
-                if (word.IndexOf(letter) % 2 != 0 && !Char.IsNumber(letter)) 
-                {
+                if (count % 2 != 0) {
                     Console.Write(letter);
                 }
+                count++;
             }
             Console.WriteLine("");
         }
